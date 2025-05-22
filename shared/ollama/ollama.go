@@ -25,7 +25,7 @@ func GetClient() *api.Client {
 	return client
 }
 
-func GetModel() string {
+func GetModelFromEnv() string {
 	return env.GetEnv("OLLAMA_MODEL")
 }
 

@@ -22,7 +22,7 @@ func PrepareWebpageContentPrompt(content *scrapper.WebPageContent) string {
 
 func RequestSummarization(content *scrapper.WebPageContent) {
 	client := ollama.GetClient()
-	model := ollama.GetModel()
+	model := ollama.GetModelFromEnv()
 
 	var stream bool = false
 	var messages []ollama.Message
