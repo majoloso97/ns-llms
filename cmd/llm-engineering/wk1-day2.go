@@ -20,5 +20,5 @@ func main() {
 	fmt.Println("Summarizing...")
 
 	scrapper.ScrapURL(url, pageContent)
-	summarizer.SendOllamaMessage(pageContent)
+	summarizer.RequestSummarization(pageContent)
 }
