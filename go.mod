@@ -4,6 +4,7 @@ go 1.24.3
 
 require (
 	github.com/gocolly/colly/v2 v2.2.0
+	github.com/joho/godotenv v1.5.1
 	github.com/ollama/ollama v0.7.0
 	github.com/openai/openai-go v1.0.0
 )
