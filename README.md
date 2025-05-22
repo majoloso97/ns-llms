@@ -20,13 +20,17 @@ The code for the assignments is organized in the following way:
 
 - /cmd: contains the entrypoints for the assignments (meant to be run from the terminal)
 - /shared: contains the code for shared functionality or data structures
-- /llm-engineering: contains the code for the LLM Engineering course
-- /basic-to-advanced: contains the code for the Basic to Advanced course
-- /mastering-rag: contains the code for the Mastering RAG course
-- /open-source-llms: contains the code for the Open Source LLMs course
+- /llm-engineering: contains the code for the [exercised provided](https://github.com/ed-donner/llm_engineering/tree/main) in the [LLM Engineering course](https://www.udemy.com/course/llm-engineering-master-ai-and-large-language-models/)
+- /basic-to-advanced: contains the code for the [Basic to Advanced course](https://www.udemy.com/course/basic-to-advanced-retreival-augmented-generation-rag-course/)
+- /mastering-rag: contains the code for the [Mastering RAG course](https://www.udemy.com/course/mastering-retrieval-augmented-generation/)
+- /open-source-llms: contains the code for the [Open Source LLMs course](https://www.udemy.com/course/open-source-llms-uncensored-secure-ai-locally-with-rag/)
 
 Each course will have its own directory, which will contain the code for the artifacts of the course. The code for the assignments will always be in the cmd directory.
 
 ## Running assignments
 
-To run the assignments, you can build or run the code from the entrypoints in /cmd.
+- You must have Go, Python, Git, and Ollama installed on your machine.
+- Make sure that Ollama is running (`ollama serve`), and that the environment variables are set correctly (a example.env file is provided in the root directory).
+- Run go mod tidy to download the dependencies.
+- To just run the assignments without building them, you can run `go run ./cmd/{course_dir}/{assignment_name}.go` from the root directory.
+- To build the assignments, you can run `go build -o ./bin/{assignment_name} ./cmd/llm-engineering/{assignment_name}.go` from the root directory.
